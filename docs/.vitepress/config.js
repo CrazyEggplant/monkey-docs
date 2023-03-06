@@ -30,6 +30,7 @@ module.exports = {
         items: [
           { text: '介绍', link: '/docker/guide/' },
           { text: 'Docker 笔记（一）', link: '/docker/section_1/' },
+          { text: 'Docker 笔记（二）', link: '/docker/section_2/' },
         ],
       },
     ]
