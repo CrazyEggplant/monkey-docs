@@ -114,7 +114,7 @@ docker-compose up
 - `--force-recreate`：强制重新创建容器，不能与 `--no-recreate` 同时使用
 - `--no-recreate`：如果容器已经存在了，则不重新创建，不能与 `--force-recreate` 同时使用
 
-**注意：**一般使用时仅输入`-d`参数即可，其他参数默认
+**注意：** 一般使用时仅输入`-d`参数即可，其他参数默认
 
 #### 2.3.3 down
 
@@ -155,7 +155,7 @@ docker-compose rm
 docker-compose exec
 ```
 
-**注：**命令基本和`docker exec`一致
+**注：** 命令基本和`docker exec`一致
 
 #### 2.3.7 ps
 
@@ -373,7 +373,7 @@ services:
 
 #### 2.4.11 secrets
 
-存储敏感数据，例如密码，密码存储有两种方式**（推荐使用第二种）**：
+存储敏感数据，例如密码，密码存储有两种方式 **（推荐使用第二种）**：
 
 1. 文件存储，例如`my_secret.txt`
 
@@ -430,7 +430,7 @@ COPY . /code/
 RUN pip install -r requirements.txt
 ```
 
-**解析：**创建一个python镜像，在镜像中创建`/code`目录，将当前目录中的文件拷贝到镜像中的`/code`目录下，并安装python项目依赖
+**解析：** 创建一个python镜像，在镜像中创建`/code`目录，将当前目录中的文件拷贝到镜像中的`/code`目录下，并安装python项目依赖
 
 #### 2.5.2 创建requirements.txt
 
@@ -463,7 +463,7 @@ services:
       - "8000:8000"
 ```
 
-**解析：**因yml配置文件中`web`服务使用的`build`参数，所以我们需先手动输入命令构建自定义镜像
+**解析：** 因yml配置文件中`web`服务使用的`build`参数，所以我们需先手动输入命令构建自定义镜像
 
 #### 2.5.4 构建镜像
 
@@ -473,7 +473,7 @@ services:
 docker-compose run web django-admin startproject django_example .
 ```
 
-**解析：**因 `docker-compose.yml` 文件中没有配置`image`，而是配置了`build`，则会根据当前项目目录中的`Dockerfile`文件构建镜像，构建时，会在镜像中执行命令`django-admin startproject django_example`，在镜像的`WORKDIR`目录中创建Django项目。因 `docker-compose.yml` 文件中配置了 `volumes` 参数，会把镜像中的 `django_example` 文件夹拷贝一份到当前项目目录
+**解析：** 因 `docker-compose.yml` 文件中没有配置`image`，而是配置了`build`，则会根据当前项目目录中的`Dockerfile`文件构建镜像，构建时，会在镜像中执行命令`django-admin startproject django_example`，在镜像的`WORKDIR`目录中创建Django项目。因 `docker-compose.yml` 文件中配置了 `volumes` 参数，会把镜像中的 `django_example` 文件夹拷贝一份到当前项目目录
 
 - 给拷贝的文件修改权限
 
@@ -512,7 +512,7 @@ Attaching to docker_django_web_1, docker_django_db_1
 
 - 执行`Django`数据库迁移命令
 
-​		**注：**打开另外一个终端执行如下命令
+​**注：** 打开另外一个终端执行如下命令
 
 ```bash
 docker-compose run web python manage.py migrate
