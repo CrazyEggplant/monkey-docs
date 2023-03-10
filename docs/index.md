@@ -18,6 +18,8 @@ features:
   - icon: 🐭
     title: Go 笔记
     details: 学习 Go、设计模式、Gin...
+    link: golang/guide/
+    linkText: Learn more
   - icon: 🍔
     title: 前端笔记
     details: 学习 JavaScript、Vue
