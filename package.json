@@ -8,7 +8,7 @@
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "zsh deploy.sh"
+    "deploy": "sh deploy.sh"
   },
   "author": "",
   "license": "ISC",
